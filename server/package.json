@@ -1,0 +1,23 @@
+{
+	"name": "vjezba_03",
+	"version": "1.0.0",
+	"description": "",
+	"main": "server.mjs",
+	"scripts": {
+		"pripremi": "npm link --save express sqlite3 express-session cookie-parser jsonwebtoken cors base32-encoding totp-generator",
+		"start": "npm run pripremi && node server.mjs rwa_mvujica21_conf.csv",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Mateo Vujica",
+	"license": "ISC",
+	"dependencies": {
+		"base32-encoding": "file:../../../../AppData/Roaming/nvm/v18.17.1/node_modules/base32-encoding",
+		"cookie-parser": "file:../../../../AppData/Roaming/nvm/v18.17.1/node_modules/cookie-parser",
+		"cors": "file:../../../../AppData/Roaming/nvm/v18.17.1/node_modules/cors",
+		"express": "file:../../../../AppData/Roaming/nvm/v18.17.1/node_modules/express",
+		"express-session": "file:../../../../AppData/Roaming/nvm/v18.17.1/node_modules/express-session",
+		"jsonwebtoken": "file:../../../../AppData/Roaming/nvm/v18.17.1/node_modules/jsonwebtoken",
+		"sqlite3": "file:../../../../AppData/Roaming/nvm/v18.17.1/node_modules/sqlite3",
+		"totp-generator": "file:../../../../AppData/Roaming/nvm/v18.17.1/node_modules/totp-generator"
+	}
+}

@@ -1,0 +1,20 @@
+<nav>
+  <ul>
+    <li><a routerLink="/">Pocetna</a></li>
+    <ng-container *ngIf="!isLogged">
+      <li><a routerLink="/prijava">Prijava</a></li>
+    </ng-container>
+    <ng-container *ngIf="isLogged">
+      <li><a routerLink="/odjava">Odjava</a></li>
+    </ng-container>
+    <li *ngIf="uloga == '1' || uloga == '2'">
+      <a routerLink="/favoriti">Favoriti</a>
+    </li>
+    <li *ngIf="uloga == '1' || uloga == '2'">
+      <a routerLink="/profil">Profil</a>
+    </li>
+    <li *ngIf="uloga == '1'"><a routerLink="/korisnici">Korisnici</a></li>
+    <li *ngIf="uloga == '1'"><a routerLink="/registracija">Registracija</a></li>
+    <li><a routerLink="/dokumentacija">Dokumentacija</a></li>
+  </ul>
+</nav>

@@ -1,0 +1,31 @@
+@mixin commonStyles {
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+  
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
+  
+  #detalji-container {
+    @include commonStyles;
+  
+    h2 {
+      color: #333;
+    }
+  
+    p {
+      margin: 5px 0;
+    }
+  
+    button {
+      padding: 8px;
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+      border: none;
+    }
+  }
+  

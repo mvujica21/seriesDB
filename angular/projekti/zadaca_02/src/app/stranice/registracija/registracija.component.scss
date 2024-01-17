@@ -1,0 +1,43 @@
+#registracija {
+  max-width: 400px;
+  margin: 0 auto;
+
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-bottom: 10px;
+  }
+
+  input[type="radio"] {
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+
+    &:hover {
+      background-color: #2980b9;
+    }
+  }
+}
+
+#registracijaError {
+  color: red;
+  margin-top: 10px;
+}

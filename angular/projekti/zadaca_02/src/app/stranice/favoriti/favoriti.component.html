@@ -1,0 +1,23 @@
+<table border="1" id="tablica_favorita">
+  <thead>
+    <tr>
+      <th scope="col">Naziv</th>
+      <th scope="col">Opis</th>
+      <th scope="col">Broj sezona</th>
+      <th scope="col">Broj epizoda</th>
+      <th scope="col">Popularnost</th>
+      <th scope="col">Godina</th>
+      <th scope="col">Slika</th>
+    </tr>
+  </thead>
+  <tbody id="favoriti"></tbody>
+  <tr *ngFor="let favorit of favoriti" (click)="detaljiFavorita(favorit.id_serije)">
+    <td>{{favorit.naziv}}</td>
+    <td>{{favorit.opis}}</td>
+    <td>{{favorit.broj_sezona}}</td>
+    <td>{{favorit.broj_epizoda}}</td>
+    <td>{{favorit.popularnost}}</td>
+    <td>{{favorit.godina}}</td>
+    <td><img src="http://image.tmdb.org/t/p/w500/{{favorit.slika}}" alt="{{favorit.naziv}}" width="120" height="200"></td> 
+   </tr>
+</table>

@@ -1,0 +1,20 @@
+<body>
+    <div id="detalji-container" *ngIf="serijaDetalji">
+        <h2>{{ serijaDetalji.name }}</h2>
+        <p>Overview: {{serijaDetalji.overview}}</p>
+        <p>Broj sezona: {{serijaDetalji.number_of_seasons}}</p>
+        <p>Broj epizoda: {{serijaDetalji.number_of_episodes}}</p>
+        <p>Popularnost: {{serijaDetalji.popularity}}</p>
+        <p>Slika:
+            <img src="http://image.tmdb.org/t/p/w500/{{ serijaDetalji.poster_path }}" alt="{{ serijaDetalji.name }}">
+        </p>
+        <p><strong>Homepage:</strong>
+            <ng-container *ngIf="serijaDetalji.homepage">
+                <a href="{{ serijaDetalji.homepage }}" target="_blank">{{ serijaDetalji.homepage }}</a>
+            </ng-container>
+            <ng-container *ngIf="!serijaDetalji.homepage">N/A</ng-container>
+        </p>
+    </div>
+    <button *ngIf="uloga == 1 || uloga == 2" type="button" id="dodajUFavorite" (click)="dodajFavorit()">Dodaj u favorite</button>
+    
+</body>

@@ -1,0 +1,23 @@
+<nav></nav>
+<h1>SeriesDB</h1>
+<div>
+    Filter: <input type="text" id="filter" placeholder="Kljucne rijeci" [(ngModel)]="filter" (ngModelChange)="onFilterChange()">
+    <button type="submit" (click)="pretraziSerije()">Traži</button>
+    <div id="stranicenje" [innerHTML]="prikaz.innerHTML"></div>
+    <div id="sadrzaj">
+        <table *ngIf="serije && serije.length > 0" border="1">
+            <tr>
+                <th>Naslov</th>
+                <th>Opis</th>
+                <th>Godina</th>
+                <th>Detalji</th>
+            </tr>
+            <tr *ngFor="let f of serije">
+                <td>{{ f.name }}</td>
+                <td>{{ f.first_air_date ? f.first_air_date.substr(0, 4) : "" }}</td>
+                <td>{{ f.overview }}</td>
+                <td><button class='detalji-btn' (click)="prikaziDetalje(f.id)">Detalji</button></td>
+            </tr>
+        </table>
+    </div>
+</div>

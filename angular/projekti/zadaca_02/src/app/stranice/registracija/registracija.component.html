@@ -1,0 +1,35 @@
+<form id="registracija" method="POST" novalidate [formGroup]="podaciZaRegistraciju" (ngSubmit)="onSubmit()">
+    <label for="ime">Ime:</label>
+    <input type="text" name="ime" id="ime" required  formControlName="ime"><br>
+
+    <label for="prezime">Prezime:</label>
+    <input type="text" name="prezime" id="prezime" required formControlName="prezime"><br>
+
+    <label for="korime">Korisničko ime:</label>
+    <input type="text" name="korime" id="korime" required formControlName="korime"><br>
+
+    <label for="lozinka">Lozinka:</label>
+    <input type="password" name="lozinka" id="lozinka" required formControlName="lozinka"><br>
+
+    <label for="email">Email:</label>
+    <input type="email" name="email" id="email" required formControlName="email"><br>
+
+    <label for="telefon">Telefon:</label>
+    <input type="tel" name="telefon" id="telefon" formControlName="telefon"><br>
+
+    <label for="grad">Grad:</label>
+    <input type="text" name="grad" id="grad" formControlName="grad"><br>
+
+    <label for="drzava">Država:</label>
+    <input type="text" name="drzava" id="drzava" formControlName="drzava"><br>
+
+    <label for="uloge_id_uloge">Tip korisnika:</label><br>
+    <input type="radio" id="admin" name="uloge_id_uloge" [value]="1" formControlName="uloge_id_uloge">
+    <label for="admin">Administrator</label><br>
+
+    <input type="radio" id="korisnik" name="uloge_id_uloge" [value]="2" formControlName="uloge_id_uloge">
+    <label for="korisnik">Korisnik</label><br>
+
+    <button type="submit">Registriraj se</button>
+</form>
+<div id="registracijaError"></div>

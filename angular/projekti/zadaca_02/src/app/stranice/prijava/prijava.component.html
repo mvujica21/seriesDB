@@ -1,0 +1,16 @@
+<form (ngSubmit)="onSubmit()" id="prijava" method="POST" novalidate >
+    <label for="ime">Korisničko ime:</label>
+    <input type="text" name="korime" id="korime" placeholder="admin/obican" [(ngModel)]="korime" [ngClass]="{'error-border' : korimeEmpty}">
+    <label for="lozinka">lozinka</label>
+    <input type="password" name="lozinka" id="lozinka" placeholder="rwa/rwa" [(ngModel)]="lozinka" [ngClass]="{'error-border' : lozinkaEmpty}">
+    <label for="totpKey" *ngIf="showTOTPInput">TOTP Ključ:</label>
+    <input type="text" name="totpKey" id="totpKey" [(ngModel)]="totpKey" *ngIf="showTOTPInput">
+    
+    <button type="submit">Submit</button>
+</form>
+<button (click)="loginWithGitHub()">Login with GitHub</button>
+<div>admin rwa</div>
+<div>obican rwa</div>
+<div>admintotp admintotp</div>
+<div>obicantotp obicantotp</div>
+<div id="poruka_prijave" *ngIf="greska">{{greska}}</div>

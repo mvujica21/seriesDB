@@ -1,0 +1,50 @@
+<h1>User Profile</h1>
+    <form id="userProfileForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="korime">Korime:</label>
+        <input type="text" id="korime" name="korime" readonly [(ngModel)]="podaci.korime">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" readonly [(ngModel)]="podaci.email">
+      </div>
+
+      <div class="form-group">
+        <label for="ime">Ime:</label>
+        <input type="text" id="ime" name="ime" [(ngModel)]="podaci.ime">
+      </div>
+
+      <div class="form-group">
+        <label for="prezime">Prezime:</label>
+        <input type="text" id="prezime" name="prezime" [(ngModel)]="podaci.prezime">
+      </div>
+
+      <div class="form-group">
+        <label for="lozinka">Lozinka:</label>
+        <input type="password" id="lozinka" name="lozinka" [(ngModel)]="podaci.lozinka">
+      </div>
+
+      <div class="form-group">
+        <label for="telefon">Telefon:</label>
+        <input type="text" id="telefon" name="telefon" [(ngModel)]="podaci.telefon">
+      </div>
+
+      <div class="form-group">
+        <label for="grad">Grad:</label>
+        <input type="text" id="grad" name="grad" [(ngModel)]="podaci.grad">
+      </div>
+
+      <div class="form-group">
+        <label for="drzava">Drzava:</label>
+        <input type="text" id="drzava" name="drzava" [(ngModel)]="podaci.drzava">
+      </div>
+
+      <div class="form-group">
+        <label for="totpPrijava">TOTP Prijava:</label>
+        <input type="checkbox" id="totpPrijava" name="totpPrijava" [(ngModel)]="podaci.totpPrijava" [checked]="podaci.totp_active === 1">
+      </div>
+      
+      <button type="submit" id="updateProfileBtn">Update Profile</button>
+    </form>
+    <div *ngIf="returnMessage">{{ returnMessage }}</div>

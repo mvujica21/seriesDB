@@ -1,0 +1,24 @@
+<!-- favoriti-detalji.component.html -->
+
+<h2>Detalji favorita</h2>
+
+<table border="1" id="tablica_sezona">
+  <thead>
+    <tr>
+      <th scope="col">Epizoda</th>
+      <th scope="col">Naziv</th>
+      <th scope="col">Opis</th>
+      <th scope="col">Godina</th>
+      <th scope="col">Slika</th>
+    </tr>
+  </thead>
+  <tbody id="sezone">
+    <tr *ngFor="let epizoda of podaci">
+      <td>{{ epizoda.broj_epizoda_u_sezoni }}</td>
+      <td>{{ epizoda.naziv }}</td>
+      <td>{{ epizoda.opis }}</td>
+      <td>{{ epizoda.godina }}</td>
+      <td><img src="http://image.tmdb.org/t/p/w500/{{epizoda.slika}}" alt="{{epizoda.naziv}}" width="120" height="200"></td> 
+    </tr>
+  </tbody>
+</table>

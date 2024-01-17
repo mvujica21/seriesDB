@@ -1,0 +1,51 @@
+#brisanje {
+    margin-bottom: 20px;
+  
+    input {
+      padding: 8px;
+      margin-right: 10px;
+    }
+  
+    button {
+      padding: 8px;
+      background-color: #3498db;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #2980b9;
+      }
+    }
+  }
+  
+  #tablica_korisnika {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: left;
+    }
+  
+    th {
+      background-color: #f2f2f2;
+    }
+  
+    tbody {
+      tr {
+        &:nth-child(even) {
+          background-color: #f9f9f9;
+        }
+  
+        td {
+          &:last-child {
+            width: 80px;
+          }
+        }
+      }
+    }
+  }
+  

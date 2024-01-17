@@ -1,0 +1,31 @@
+<form id="brisanje" method="delete" (ngSubmit)="onDelete(koris)">
+    Obriši korisnika: <input type="text" id="filter" placeholder="Korisničko ime" [(ngModel)]="koris"> <button type="submit">Obriši</button><br>
+</form>
+<table border="1" id="tablica_korisnika">
+    <thead>
+        <tr>
+            <th scope="col">Ime</th>
+            <th scope="col">Prezime</th>
+            <th scope="col">Korisničko ime</th>
+            <th scope="col">Lozinka</th>
+            <th scope="col">Email</th>
+            <th scope="col">Telefon</th>
+            <th scope="col">Grad</th>
+            <th scope="col">Država</th>
+            <th scope="col">Uloga</th>
+        </tr>
+    </thead>
+    <tr *ngFor="let korisnik of korisnici">
+        <td>{{korisnik.ime}}</td>
+        <td>{{korisnik.prezime}}</td>
+        <td>{{korisnik.korime}}</td>
+        <td>{{korisnik.lozinka}}</td>
+        <td>{{korisnik.email}}</td>
+        <td>{{korisnik.telefon}}</td>
+        <td>{{korisnik.grad}}</td>
+        <td>{{korisnik.drzava}}</td>
+        <td>{{korisnik.uloge_id_uloge}}</td>
+    </tr>
+    <tbody id="korisnici">
+    </tbody>
+</table>
